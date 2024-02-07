@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: auto;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.team-member {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+.team-member img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%; /* para imágenes redondas */
+    width: 100px; /* ajusta según tu preferencia */
+    height: 100px; /* ajusta según tu preferencia */
+}
+
+.team-member h2 {
+    margin-top: 0;
+}
