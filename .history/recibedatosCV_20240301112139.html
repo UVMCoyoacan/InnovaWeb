@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recibe Datos</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #ffd1dc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Datos Recibidos</h2>
+        <p>Nombre: <span id="nombre"></span></p>
+        <p>Correo Electrónico: <span id="correo"></span></p>
+        <p>Número Telefónico: <span id="telefono"></span></p>
+    </div>
+
+    <script>
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var nombre = getUrlVars()["nombre"];
+        var correo = getUrlVars()["correo"];
+        var telefono = getUrlVars()["telefono"];
+
+        document.getElementById("nombre").innerText = nombre;
+        document.getElementById("correo").innerText = correo;
+        document.getElementById("telefono").innerText = telefono;
+    </script>
+</body>
+</html>

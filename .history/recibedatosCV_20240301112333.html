@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recibe Datos</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #ffd1dc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Datos Recibidos</h2>
+        <p>Recibe datos</p>
+        
+        <h3>Persona</h3>
+        <p id="Persona"></p>
+        
+        <h3>Datos de Contacto</h3>
+        <p id="Detalles"></p>
+    </div>
+
+    <script>
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                if (vars[key]) {
+                    vars[key].push(value);
+                } else {
+                    vars[key] = [value];
+                }
+            });
+            return vars;
+        }
+
+        var nombre = getUrlVars()["nombre"];
+        var telefono = getUrlVars()["telefono"];
+        var correo = getUrlVars()["email"]; // Cambiado de "correo" a "email" para que coincida con el formulario
+
+        var nomper = document.getElementById("Persona");
+        var datPers = document.getElementById("Detalles");
+        nomper.innerHTML = "<i>" + nombre + "</i>";
+        nomper.style = "color: blue; font-size: 20px;";
+        datPers.innerHTML = "<i>" + telefono + "</i>";
+        datPers.style = "color: blue; font-size: 20px;";
+        datPers.innerHTML += "<br><i>" + correo + "</i>";
+    </script>
+</body>
+</html>
+

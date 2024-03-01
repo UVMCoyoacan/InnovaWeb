@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recibe Datos</title>
+    <style>
+        body {
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+            background-color: #ffd1dc;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 30px;
+            text-align: center;
+            color: red;
+        }
+        h3 {
+            font-size: 1.5em;
+            color:black;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        .dato {
+            font-style:inherit;
+            color: black;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Datos Recibidos</h2>
+        
+        <h3>Persona</h3>
+        <p class="dato" id="Persona"></p>
+        
+        <h3>Datos de Contacto</h3>
+        <p class="dato" id="Detalles"></p>
+    </div>
+
+    <script>
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = decodeURIComponent(value.replace(/\+/g, ' '));
+            });
+            return vars;
+        }
+
+        var params = getUrlVars();
+        var nombre = params["nombre"];
+        var telefono = params["telefono"];
+        var correo = params["email"];
+
+        var nomper = document.getElementById("Persona");
+        var datPers = document.getElementById("Detalles");
+        nomper.textContent = nombre;
+        datPers.innerHTML = "Teléfono: " + telefono + "<br>Correo electrónico: " + correo;
+    </script>
+</body>
+</html>
+
+

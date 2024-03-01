@@ -42,9 +42,9 @@ footer {
 .team-member img {
     float: left;
     margin-right: 20px;
-    border-radius: 50%; 
-    width: 100px; 
-    height: 100px; 
+    border-radius: 50%; /* para imágenes redondas */
+    width: 100px; /* ajusta según tu preferencia */
+    height: 100px; /* ajusta según tu preferencia */
 }
 
 .team-member h2 {
