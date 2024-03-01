@@ -55,28 +55,36 @@
                 <li>Manejo de sistemas telefónicos y software de atención al cliente para documentar y gestionar interacciones</li>
             </ul>
         </div>
-
-        <style>
+        <script>
+            function irAFormulario() {
+                window.location.href = "indexformu.html";
+            }
+        </script>
+            <style>
                 button {
                     display: block;
                     margin: 0 auto;
                     background-color: pink;
                     border: none;
-                    color: black;
+                    color: white;
                     padding: 10px 20px;
                     font-size: 16px;
                     cursor: pointer;
                 }
-        </style>
-
-        <button onclick="irAFormulario()">REGISTRAR DATOS </button>
-
-        <script>
+            </style>
+        </head>
+        <body>
+            <button onclick="irAFormulario()">REGISTRA TUS DATOS </button>
+        
+            <script>
                 function irAFormulario() {
-                // Aquí puedes agregar el código para redirigir al usuario al formulario de contacto
-                window.location.href = "indexformu.html";
-            }
-        </script>
-
+                    // Aquí puedes agregar el código para redirigir al usuario al formulario de contacto
+                    alert("Redirigiendo al formulario de contacto...");
+                }
+            </script>
+        </body>
+        </html>
+        
+    </div>
 </body>
 </html>
