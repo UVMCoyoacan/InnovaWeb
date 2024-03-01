@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="1.1 styles-form-abdi.css">
+
+    <script>
+        
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,
+                function (m, key, value) {
+                    if (vars[key]) {
+                        vars[key].push(value);
+                    } else {
+                        vars[key] = [value];
+                    }
+                });
+            console.log(vars);
+            return vars;
+        }
+
+        // Obtener los parámetros de la URL
+        var queryParams = getUrlVars();
+
+        // Obtener los valores del formulario de contacto
+        var nombre = queryParams["nombre"];
+        var email = queryParams["email"];
+        var telefono = queryParams["telefono"];
+        var mensaje = queryParams["mensaje"];
+    </script>    
+</head>
+<link rel="stylesheet" href="1.1 styles-form-abdi.css">
+<body>
+
+    <video 
+    src="abstract_-_27726 (540p).mp4" autoplay="true" 
+    muted="true" 
+    loop="true" >
+   </video> 
+
+    <h2>Formulario de Contacto</h2>
+
+    <h3>Detalles del Contacto</h3>
+    <p><b>Nombre:</b> <span id="nombreDetalle"></span></p>
+    <p><b>Correo electrónico:</b> <span id="emailDetalle"></span></p>
+    <p><b>Teléfono:</b> <span id="telefonoDetalle"></span></p>
+    <p><b>Mensaje:</b> <span id="mensajeDetalle"></span></p>
+
+    <script>
+        // Mostrar los detalles del contacto en el HTML
+        document.getElementById("nombreDetalle").textContent = nombre || "No proporcionado";
+        document.getElementById("emailDetalle").textContent = email || "No proporcionado";
+        document.getElementById("telefonoDetalle").textContent = telefono || "No proporcionado";
+        document.getElementById("mensajeDetalle").textContent = mensaje || "No proporcionado";
+    </script>
+</body>
+
+</html>
