@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.team-member {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+.team-member img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%; /* para imágenes redondas */
+    width: 100px; /* ajusta según tu preferencia */
+    height: 100px; /* ajusta según tu preferencia */
+}
+.team-member h2 {
+    margin-top: 0;
+}
+.habilities {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+.education {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+     /* Centrar el botón horizontalmente */
+     display: block;
+     margin: 0 auto;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    position: auto;
+    bottom: 0;
+    width: 100%;
+}

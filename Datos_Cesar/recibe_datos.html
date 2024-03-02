@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recepción de Datos</title>
+    <link rel="stylesheet" href="estilorecibe_datos.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Datos Recibidos</h2>
+    <div id="datos">
+        <p><span class='data-label'>Nombre:</span> <span class='nombre'></span></p>
+        <p><span class='data-label'>Email:</span> <span class='email'></span></p>
+        <p><span class='data-label'>Celular:</span> <span class='celular'></span></p>
+    </div>
+</div>
+
+<script>
+    // Función para obtener los parámetros de la URL
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+
+    // Obtener los parámetros de la URL
+    var params = getUrlVars();
+    var nombre = params['nombre'];
+    var email = params['email'];
+    var celular = params['celular'];
+
+    // Mostrar los datos en el formulario
+    document.querySelector('.nombre').textContent = nombre;
+    document.querySelector('.email').textContent = email;
+    document.querySelector('.celular').textContent = celular;
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+   
