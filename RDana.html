@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibe Datos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #cec34e;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .dato {
+            margin-bottom: 15px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .value {
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Datos Recibidos Correctamente</h2>
+
+    <div class="dato">
+        <span class="label">Nombre:</span>
+        <span class="value" id="nombre"></span>
+    </div>
+    <div class="dato">
+        <span class="label">Correo Electrónico:</span>
+        <span class="value" id="correo"></span>
+    </div>
+    <div class="dato">
+        <span class="label">Número de Teléfono:</span>
+        <span class="value" id="telefono"></span>
+    </div>
+    <div class="dato">
+        <span class="label">Comentarios:</span>
+        <span class="value" id="comentarios"></span>
+    </div>
+
+    <script>
+        window.onload = function () {
+            var params = new URLSearchParams(window.location.search);
+            var nombre = params.get('nombre');
+            var correo = params.get('correo');
+            var telefono = params.get('telefono');
+            var comentarios = params.get('comentarios');
+
+            document.getElementById("nombre").textContent = nombre;
+            document.getElementById("correo").textContent = correo;
+            document.getElementById("telefono").textContent = telefono;
+            document.getElementById("comentarios").textContent = comentarios;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
